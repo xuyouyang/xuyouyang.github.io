@@ -88,7 +88,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-20T14:20:18.000Z" itemprop="datePublished">10月 20 2014</time>
-    更新日期:<time datetime="2015-02-28T11:19:14.000Z" itemprop="dateModified">2月 28 2015</time>
+    更新日期:<time datetime="2015-02-28T14:17:14.000Z" itemprop="dateModified">2月 28 2015</time>
     
   </p>
 </header>
@@ -118,7 +118,17 @@
 - (<span class="keyword">void</span>)walk;<span class="comment">// 走路</span>
 
 <span class="keyword">@end</span>
-</code></pre>  
+</code></pre><p>这是一个People的类，拥有“吃饭”、“睡觉”、“走路”等行为。现在，如果这个“人”学会了写代码，那么就要给他添加“code”行为，添加一个“code”分类就能很好地处理这个问题。</p>
+<pre><code><span class="preprocessor">#import <span class="title">"People.h"</span></span>
+
+<span class="class"><span class="keyword">@interface</span> <span class="title">People</span> (<span class="title">Code</span>)</span>
+
+- (<span class="keyword">void</span>)code;<span class="comment">// 写代码</span>
+
+<span class="keyword">@end</span>
+</code></pre><p>这就是我们建立的分类，将声明文件和实现文件统一采用”原类名+Category名”的方式命名。具体格式一般如下：<br>#import “原类的名字”<br>@interface “原类类的名字” （分类的名字）<br>//分类行为<br>@end</p>
+<p>具体使用时，需要同时引入基础类和分类的.h文件即可。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
