@@ -9,7 +9,10 @@
     
     <meta name="author" content="xuyouyang">
     
-    <meta name="description" content="123">
+    <meta name="description" content="1、Category（分类）
+在Objective-C中，如果我们要想给一个已经存在的、内部逻辑复杂的类添加一些新的行为（方法），该怎么做呢？我能想到这么2种方法：  
+
+在原来的类中添加新的方法。（面向对象中的“开-闭原则”告诉我们，对修改关闭，原来的类中逻辑结构已经稳定，不建议直接修改。而且OC">
     
     
     
@@ -85,7 +88,7 @@
     </p>
   <p class="article-time">
     <time datetime="2015-01-21T14:20:18.000Z" itemprop="datePublished">1月 21 2015</time>
-    更新日期:<time datetime="2015-01-21T14:23:11.000Z" itemprop="dateModified">1月 21 2015</time>
+    更新日期:<time datetime="2015-01-27T09:29:32.000Z" itemprop="dateModified">1月 27 2015</time>
     
   </p>
 </header>
@@ -94,11 +97,28 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">1、Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2_使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 使用方法</span></a></li></ol></li></ol>
 		</div>
 		
-		<p>123</p>
-  
+		<h2 id="1、Category（分类）">1、Category（分类）</h2>
+<p>在Objective-C中，如果我们要想给一个已经存在的、内部逻辑复杂的类添加一些新的行为（方法），该怎么做呢？<br>我能想到这么2种方法：  </p>
+<ol>
+<li>在原来的类中添加新的方法。（面向对象中的“开-闭原则”告诉我们，对修改关闭，原来的类中逻辑结构已经稳定，不建议直接修改。而且OC自带的类我们也看不到其源码）</li>
+<li>继承原来的类。（看上去不错，但是在原来类实例过的地方都要修改成相应子类，还是不太可行）</li>
+</ol>
+<p><strong>Objective-C中的Category给我们提供了解决这一类问题的方案。它可以让我们动态的在已经存在的类中添加新的行为（方法），对类进行扩展时不需要访问其源码，也不需要创建子类。</strong></p>
+<h3 id="1-2_使用方法">1.2 使用方法</h3>
+<p>Category的实现很简单，我们举个例子来说明。</p>
+<pre><code><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
+
+<span class="class"><span class="keyword">@interface</span> <span class="title">Peopel</span> : <span class="title">NSObject</span></span>
+
+- (<span class="keyword">void</span>)eat;<span class="comment">// 吃饭</span>
+- (<span class="keyword">void</span>)sleep;<span class="comment">// 睡觉</span>
+- (<span class="keyword">void</span>)walk;<span class="comment">// 走路</span>
+
+<span class="keyword">@end</span>
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -147,7 +167,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">1、Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2_使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 使用方法</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
