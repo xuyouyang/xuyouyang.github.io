@@ -88,7 +88,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-20T14:20:18.000Z" itemprop="datePublished">10月 20 2014</time>
-    更新日期:<time datetime="2015-02-28T14:22:29.000Z" itemprop="dateModified">2月 28 2015</time>
+    更新日期:<time datetime="2015-02-28T14:45:22.000Z" itemprop="dateModified">2月 28 2015</time>
     
   </p>
 </header>
@@ -109,7 +109,8 @@
 <p><strong>Objective-C中的Category给我们提供了解决这一类问题的方案。它可以让我们动态的在已经存在的类中添加新的行为（方法），对类进行扩展时不需要访问其源码，也不需要创建子类。</strong></p>
 <h3 id="使用方法">使用方法</h3>
 <p>Category的实现很简单，我们举个例子来说明。</p>
-<pre><code><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
+<pre><code><span class="comment">//Peopel.h</span>
+<span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
 
 <span class="class"><span class="keyword">@interface</span> <span class="title">Peopel</span> : <span class="title">NSObject</span></span>
 
@@ -119,7 +120,8 @@
 
 <span class="keyword">@end</span>
 </code></pre><p>这是一个People的类，拥有“吃饭”、“睡觉”、“走路”等行为。现在，如果这个“人”学会了写代码，那么就要给他添加“code”行为，添加一个“code”分类就能很好地处理这个问题。</p>
-<pre><code><span class="preprocessor">#import <span class="title">"People.h"</span></span>
+<pre><code><span class="comment">//Peopel+Code.h</span>
+<span class="preprocessor">#import <span class="title">"People.h"</span></span>
 
 <span class="class"><span class="keyword">@interface</span> <span class="title">People</span> (<span class="title">Code</span>)</span>
 
