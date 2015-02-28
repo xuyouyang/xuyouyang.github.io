@@ -9,10 +9,10 @@
     
     <meta name="author" content="xuyouyang">
     
-    <meta name="description" content="1、Category（分类）
+    <meta name="description" content="Category（分类）
 在Objective-C中，如果我们要想给一个已经存在的、内部逻辑复杂的类添加一些新的行为（方法），该怎么做呢？我能想到这么2种方法：  
 
-在原来的类中添加新的方法。（面向对象中的“开-闭原则”告诉我们，对修改关闭，原来的类中逻辑结构已经稳定，不建议直接修改。而且OC">
+在原来的类中添加新的方法。（面向对象中的“开-闭原则”告诉我们，对修改关闭，原来的类中逻辑结构已经稳定，不建议直接修改。而且OC自带">
     
     
     
@@ -80,7 +80,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/20/my-new-post/" title="my new post" itemprop="url">my new post</a>
+      <a href="/2014/10/20/Category/" title="my new post" itemprop="url">my new post</a>
   </h1>
   <p class="article-author">By
     
@@ -88,7 +88,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-20T14:20:18.000Z" itemprop="datePublished">10月 20 2014</time>
-    更新日期:<time datetime="2015-02-28T11:10:37.000Z" itemprop="dateModified">2月 28 2015</time>
+    更新日期:<time datetime="2015-02-28T11:16:46.000Z" itemprop="dateModified">2月 28 2015</time>
     
   </p>
 </header>
@@ -97,17 +97,17 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">1、Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2_使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 使用方法</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">使用方法</span></a></li></ol></li></ol>
 		</div>
 		
-		<h2 id="1、Category（分类）">1、Category（分类）</h2>
+		<h2 id="Category（分类）">Category（分类）</h2>
 <p>在Objective-C中，如果我们要想给一个已经存在的、内部逻辑复杂的类添加一些新的行为（方法），该怎么做呢？<br>我能想到这么2种方法：  </p>
 <ol>
 <li>在原来的类中添加新的方法。（面向对象中的“开-闭原则”告诉我们，对修改关闭，原来的类中逻辑结构已经稳定，不建议直接修改。而且OC自带的类我们也看不到其源码）</li>
 <li>继承原来的类。（看上去不错，但是在原来类实例过的地方都要修改成相应子类，还是不太可行）</li>
 </ol>
 <p><strong>Objective-C中的Category给我们提供了解决这一类问题的方案。它可以让我们动态的在已经存在的类中添加新的行为（方法），对类进行扩展时不需要访问其源码，也不需要创建子类。</strong></p>
-<h3 id="1-2_使用方法">1.2 使用方法</h3>
+<h3 id="使用方法">使用方法</h3>
 <p>Category的实现很简单，我们举个例子来说明。</p>
 <pre><code><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
 
@@ -137,7 +137,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2014/10/20/my-new-post/" data-title="my new post | Xyy&#39;s Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2014/10/20/Category/" data-title="my new post | Xyy&#39;s Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -167,7 +167,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">1、Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2_使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 使用方法</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Category（分类）"><span class="toc-number">1.</span> <span class="toc-text">Category（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法"><span class="toc-number">1.1.</span> <span class="toc-text">使用方法</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
