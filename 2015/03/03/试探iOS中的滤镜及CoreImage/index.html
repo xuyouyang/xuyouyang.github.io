@@ -86,7 +86,7 @@
     </p>
   <p class="article-time">
     <time datetime="2015-03-03T10:50:27.000Z" itemprop="datePublished">3月 3 2015</time>
-    更新日期:<time datetime="2015-03-03T14:18:32.000Z" itemprop="dateModified">3月 3 2015</time>
+    更新日期:<time datetime="2015-03-03T14:20:31.000Z" itemprop="dateModified">3月 3 2015</time>
     
   </p>
 </header>
@@ -109,7 +109,7 @@
 <pre><code><span class="attribute">NSArray *filterNames </span>=<span class="string"> [CIFilter filterNamesInCategory:kCICategoryBuiltIn];</span>
 </code></pre><p>图像滤镜的工作主要由三个部分组成：<strong>创建输入图像</strong>，<strong>构建和配置滤镜图表</strong>，<strong>得到滤镜处理后的图像</strong>。<br>1、创建输入图像<br>Core Image 滤镜要求其输入图像是 CIImage 类型，因此我们要使用CIImage类来创建图像。<br>2、构建和配置滤镜图表<br>构建一个滤镜图表由这几个部分组成：实例化我们需要的滤镜，设置它们的参数，把它们连接起来以便该图像数据按顺序传过每个滤镜。我们要使用到CIFilter类。<br>3、滤镜处理后的图像<br>滤镜都有一个名为 outputImage 的属性，但是它也是 CIImage 类型的，而我们比较常用的是UIImage和UIImageView。因此，如果我们要将CIImage转换到UIImage的话，还要借助CIContext类，将CIImage先过渡到CGImageRef，然后在通过UIImage类中的imageWithCGImage:方法最终获得UIImage。  </p>
 <p>下面我们将具体通过代码来展示滤镜工作的过程：</p>
-<pre><code><span class="comment">// 1、创建输入图像，CIImage类型，这里使用一个网上图片。</span>
+<pre><code>    <span class="comment">// 1、创建输入图像，CIImage类型，这里使用一个网上图片。</span>
 <span class="constant">    CIImage *inputImage</span> = [CIImage imageWithContentsOfURL:[NSURL URLWithString:@<span class="string">"http://g.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=75939ccea21ea8d38a772744f137047c/9213b07eca8065384abe8f6693dda144ad34826a.jpg"</span>]];
 
     <span class="comment">// 2、构建一个滤镜图表</span>
